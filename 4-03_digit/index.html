@@ -1,0 +1,51 @@
+a<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<title>template</title>
+<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+<div class="header-contents">
+<h1>タイトル</h1>
+<h2>サブタイトル</h2>
+</div><!-- /.header-contents -->
+</header>
+<div class="main-wrapper">
+<section>
+    <h2>standars reival mp3</h2>
+    <div id="list">
+        
+    </div>
+	
+</section>
+</div><!-- /.main-wrapper -->
+<footer>JavaScript Samples</footer>
+<script>
+    var addZero = function(num,digit){
+        var numString = String(num);
+        while(numString.length < digit){
+            numString = '0' + numString;
+        }
+        return numString;
+    }
+
+
+    var songs =[
+        'apple',
+        'sony',
+        'vicnity',
+        'see you again'
+    ];
+    for(var i=0;i < songs.length;i++){
+        var paragraph = document.createElement('p');
+        paragraph.textContent = addZero(i + 1,2) + '.' + songs[i];
+        document.getElementById('list').appendChild(paragraph);
+    }
+    console.log(addZero(1,2));
+</script>
+</body>
+</html>
